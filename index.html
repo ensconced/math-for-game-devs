@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>math for game devs</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      #canvas {
+        flex: 1 1 1200px;
+        min-width: 0;
+      }
+
+      #flex-container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      #controls {
+        padding: 10px;
+        height: 100%;
+        flex: 0 1 200px;
+        background-color: lightgrey;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #controls > label {
+        padding: 10px;
+      }
+
+      #controls > label > select {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flex-container">
+      <div id="controls"></div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
