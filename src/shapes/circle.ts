@@ -5,7 +5,7 @@ import Vec from "../vec";
 interface CircleOpts {
   centre: Vec;
   radius: number;
-  stroke: string;
+  stroke?: string;
   fill: string;
 }
 
@@ -15,7 +15,7 @@ export class CircleNode extends Node {
   fill: string;
   constructor(opts: CircleOpts) {
     super(opts.centre);
-    this.stroke = opts.stroke;
+    this.stroke = opts.stroke ?? "black";
     this.fill = opts.fill;
     this.radius = opts.radius;
   }
